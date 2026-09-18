@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f5f7fb;
+  color: #172033;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  width: min(900px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 56px 0;
+}
+.hero {
+  margin-bottom: 28px;
+}
+.eyebrow,
+.section-label {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.hero h1,
+.panel-heading h2,
+.empty-panel h2 {
+  margin: 0;
+}
+.hero h1 {
+  font-size: 40px;
+}
+.subtitle {
+  margin: 10px 0 0;
+  color: #667085;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.stat-card,
+.todo-panel,
+.empty-panel {
+  background: #fff;
+  border: 1px solid #e3e8f3;
+  border-radius: 16px;
+}
+.stat-card {
+  padding: 20px;
+}
+.stat-card span {
+  display: block;
+  color: #667085;
+  font-size: 14px;
+}
+.stat-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 32px;
+}
+
+.todo-panel,
+.empty-panel {
+  padding: 24px;
+}
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.count-badge {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 700;
+}
+.todo-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.todo-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  color: #172033;
+  font: inherit;
+}
+.todo-form input:focus {
+  outline: 3px solid #bfdbfe;
+  border-color: #2563eb;
+}
+.todo-form button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.todo-form button:hover {
+  background: #1d4ed8;
+}
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.todo-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-top: 1px solid #edf1f7;
+}
+.check-button {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  padding: 0;
+  border: 2px solid #aab7cf;
+  border-radius: 50%;
+  background: #fff;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+.check-button:hover {
+  border-color: #2563eb;
+}
+.todo-list li.done .check-button {
+  border-color: #2563eb;
+  background: #2563eb;
+}
+.todo-list li.done strong {
+  color: #98a2b3;
+  text-decoration: line-through;
+}
+.todo-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.todo-content span {
+  color: #667085;
+  font-size: 14px;
+}
+.delete-button {
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #dc2626;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.delete-button:hover {
+  background: #fef2f2;
+}
+.list-empty-message {
+  margin: 0;
+  padding: 16px 0 0;
+  color: #667085;
+  text-align: center;
+}
+.empty-state {
+  padding: 28px 16px 10px;
+  text-align: center;
+}
+.empty-state h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.empty-state p {
+  margin: 8px 0 0;
+  color: #667085;
+}
+.empty-panel {
+  margin-top: 22px;
+  text-align: center;
+}
+.empty-panel p {
+  margin: 10px 0 0;
+  color: #667085;
+}
+.completed-list {
+  margin-top: 16px;
+  text-align: left;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 36px 0;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .todo-form {
+    flex-direction: column;
+  }
+  .todo-form button {
+    width: 100%;
+  }
+  .todo-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.todo-form button,
+.todo-list button {
+  min-height: 44px;
+  padding: 10px 14px;
+}
+
+.empty-state {
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  color: #667085;
+  padding: 24px;
+  text-align: center;
+}
