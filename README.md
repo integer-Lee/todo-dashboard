@@ -1,16 +1,49 @@
-# React + Vite
+# 개인 할 일 대시보드
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React로 만든 개인용 할 일 관리 웹앱입니다.  
+할 일을 추가하고, 완료 처리하고, 삭제할 수 있으며 브라우저에 데이터가 저장됩니다.
 
-Currently, two official plugins are available:
+## 배포 주소
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://todo-dashboard-seven-khaki.vercel.app/
 
-## React Compiler
+## 주요 기능
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 할 일 추가
+- 완료 상태 변경
+- 할 일 삭제
+- 전체, 진행 중, 완료 개수 표시
+- localStorage를 사용한 브라우저 저장
 
-## Expanding the ESLint configuration
+## 사용 기술
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript
+- CSS
+- localStorage
+
+## 실행 방법
+
+`bash
+npm install
+npm run dev
+`
+
+## 빌드 방법
+
+`bash
+npm run build
+`
+
+## 주의 사항
+
+이 프로젝트는 학습용 프로젝트입니다.  
+localStorage에는 비밀번호, API 키, 개인정보 같은 민감한 정보를 저장하면 안 됩니다.
+
+## 향후 개선 아이디어
+
+- 검색 기능
+- 우선순위 기능
+- 다크 모드
+- 마감일 입력
+- 드래그 앤 드롭 정렬
